@@ -1,0 +1,52 @@
+
+SUpaya paham dan mngerti pada saat instansiate atau declare sbuah object 
+maka berikut diberi contoh :
+contoh kita pakai class Monster aja sbb:
+
+Monster m1 =Monster();
+
+1)nah kata Monster sbelah kiri adalah tipe data yg akan dimiliki oleh object monster yg akan dicreate
+atau dicetak oleh class Monster;
+
+2) m1 sendiri adalah pointer penunjuk alokasi memori dari object yg akan dicreate /terinstancie
+   yg nunjukin lokasi object di memori dimana lokasi dia dicreate
+3) kata Monster() ; ini adalah sbnarnya object baru yg dicreate oleh class Monster tadi 
+nah jadi kalau m1.pointHealth = 30;
+    nah si m1 pointer tadi akan kasih value alokasikan nilai 30 ke object Monster() yg dicreate barusan
+    nah demikianlah smoga bisa dipahami
+
+jadi kalau misalkan masing2 object tadi dimasukan list yg gak jadi maslah karena ini mennjukan alokasi 
+susunan dari pointer tadi dalam list!
+List<string> smua_m
+jadi dalam permasalah kita buat monster kecoa, mosnter ubur2 yg turunan dari monster atau inheritance dari mosnterkmudian
+kita badge atau list gak maslah ini dati keterangan diatas tadi bahwa m1 h1 adalah alias pointer dari object yg dicreate
+sedangkan kata Mosnter() atau Nama_Obj_Yang_Tercreate() adalah obj yg sebenarnya yg dicreate!
+
+
+//masalh inheritance 
+tadi sudah buat root class character -->anak: monster --->kita buat lagi bisa--->monster_kecoa
+                                                                             -->moster_ubur2
+                                     -->anak:hero
+
+ jadi kita buat lagi extend monster_kcoa dan moster_ubur extend dari monster
+ jika kosong classnya maka metodnya dia bd2 sama "eat human" 
+ kita bisa buat metode masing2 utk moster_kco "iam flying" ubur2 "wus iam swim"
+ nah kita bisa utk kasih command berbarengan  misalkan kita mau mereka 
+ mosnter,mosnter kcoa,mosnter_ubur smua makan  maka caranya tinggal di masukan listt dgn metode add
+ baru kit abisa perintahkan 
+ nah misalkan hanya monster ubur2 saja yg diperintahkan 
+ maka kita buat looping dan dlm list dan cari yg ubur2 dgn perintah is 
+ if(m is monster_ubur) {
+   print(m.eathhumans()) 
+ }      
+
+ tapi jika kita yakin sudah ada mmg dalam list tsb ada mosteruburnya maka kita bisa gunakan langsung
+ print(m as mosterubur).eathhumans();
+                             
+
+
+
+
+
+
+
