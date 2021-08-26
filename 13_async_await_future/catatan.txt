@@ -1,0 +1,122 @@
+Future 
+Future merupakan salah satu keyword yang disediakan oleh dart yang seperti
+ namanya yaitu masa depan, jadi keyword ini gunanya untuk mengembalikan masa depan 
+ atau mengembalikan nilainya untuk waktu yang akan datang 
+
+contoh penggunaan future 
+
+void main() {
+  fetchUserOrder();
+  print('Ambil Datanya');
+}
+
+
+Future<void> fetchUserOrder() {
+  return Future.delayed(Duration(seconds: 2),
+      () => print('Selamat datang Peserta bootcamp flutter'));
+}
+
+/// BEKERJA DGN ASYNC AWAIT 
+Future 
+Future merupakan salah satu keyword yang disediakan oleh dart yang 
+seperti namanya yaitu masa depan, jadi keyword ini gunanya untuk 
+mengembalikan masa depan atau mengembalikan nilainya untuk waktu 
+yang akan datang 
+
+contoh penggunaan future 
+
+void main() {
+  fetchUserOrder();
+  print('Ambil Datanya');
+}
+
+
+Future<void> fetchUserOrder() {
+  return Future.delayed(Duration(seconds: 2),
+      () => print('Selamat datang Peserta bootcamp flutter'));
+}
+
+
+Contoh Synchronous
+String createOrderMessage() {
+  var order = fetchUserOrder();
+  return 'Your order is: $order';
+}
+
+Future<String> fetchUserOrder() =>
+    // Imagine that this function is
+    // more complex and slow.
+    Future.delayed(
+      Duration(seconds: 2),
+      () => 'Large Latte',
+    );
+
+void main() {
+  print('Fetching user order...');
+  print(createOrderMessage());
+}
+Contoh Asynchronous
+Future<String> createOrderMessage() async {
+  var order = await fetchUserOrder();
+  return 'Your order is: $order';
+}
+
+Future<String> fetchUserOrder() =>
+    // Imagine that this function is
+    // more complex and slow.
+    Future.delayed(
+      Duration(seconds: 2),
+      () => 'Large Latte',
+    );
+
+Future<void> main() async {
+  print('Fetching user order...');
+  print(await createOrderMessage());
+}
+contoh asynchronous akan berbeda dalam tiga hal:
+
+1)Jenis return/kembalian untuk createOrderMessage () berubah dari 
+String ke Future <String>.
+
+2)keyword async muncul sebelum body fungsi untuk 
+createOrderMessage () dan main ().
+
+3)keyword await muncul sebelum memanggil fungsi Asynchronous 
+fetchUserOrder () dan createOrderMessage ().
+
+ 
+////Handling Error Try Catch //////
+untuk menangani handling error function async gunakan, 
+try-catch jadi apabila succes akan masuk ke try dan jika error 
+akan di tangani oleh catch
+
+dan berikut ini merupakan contoh synctaq try catch :
+
+try {
+  var order = await fetchUserOrder();
+  print('Awaiting user order...');
+} catch (err) {
+  print('Caught error: $err');
+}
+Try-Catch contoh di dalam program
+Future<void> printOrderMessage() async {
+  try {
+    var order = await fetchUserOrder();
+    print('Awaiting user order...');
+    print(order);
+  } catch (err) {
+    print('Caught error: $err');
+  }
+}
+
+Future<String> fetchUserOrder() {
+  // Imagine that this function is more complex.
+  var str = Future.delayed(
+      Duration(seconds: 4),
+      () => throw 'Cannot locate user order');
+  return str;
+}
+
+Future<void> main() async {
+  await printOrderMessage();
+}
