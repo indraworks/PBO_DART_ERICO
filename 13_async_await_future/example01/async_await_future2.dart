@@ -1,3 +1,5 @@
+//INI CONTOH AYSNC AWAIT FUTURE 1
+
 class Person {
   String name =
       'default name'; //default name dtampilkna jika blum waktu 3 detik
@@ -25,7 +27,7 @@ void main() {
   // print("job3");
   // print('job4 end');
 
-  //cara async
+  //cara async await future
   print('job1');
   print('job2 :');
   myp.getDataAsync();
