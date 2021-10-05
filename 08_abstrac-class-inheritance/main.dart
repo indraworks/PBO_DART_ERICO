@@ -12,4 +12,3 @@ class anak_class implements nama_abstract_kelas {
 sbb:
 */
 
-abstract class 
